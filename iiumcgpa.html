@@ -18,12 +18,12 @@
 <td class="tableborderzero"><input size="5" name="gpa"> </td></tr>
 
 <tr>
-<td class="tableborderzero">Total credit hours : </td>
+<td class="tableborderzero">Total Credit Hours Earned (Last Semester) : </td>
 <td class="tableborderzero"><input size="5" name="doned"> </td></tr></tbody></table></td>
 <td class="tableborderzero">
 </td></tr></tbody></table>
 </form>
-
+<br>
 </em><form class="formborder" name="forrm" action="" method="post"><em>
 <table class="tableborderzero">
 <tbody>
@@ -258,7 +258,7 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 <td class="tableborderzero"></td>
 <td class="tableborderzero"><input size="5" name="sum_credit_hours"> </td>
 <td class="tableborderzero"></td>
-<td class="tableborderzero"><input size="5" name="sum_grade_points"> </td></tr>
+<td class="tableborderzero"><input size="10" name="sum_grade_points"> </td></tr>
 
 <tr>
 <td class="tableborderzero" width="90">NEW GPA </td>
@@ -266,14 +266,24 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 <td class="tableborderzero"></td>
 <td class="tableborderzero"></td>
 <td class="tableborderzero"></td>
-<td class="tableborderzero"><input size="5" name="term_gpa"> </td></tr>
+<td class="tableborderzero"><input size="10" name="term_gpa"> </td></tr>
 <tr>
 <td class="tableborderzero" width="90">NEW CGPA </td>
 <td class="tableborderzero"></td>
 <td class="tableborderzero"></td>
 <td class="tableborderzero"></td>
 <td class="tableborderzero"></td>
-<td class="tableborderzero"><input size="5" name="cumulative_gpa"> </td></tr></tbody></table>
+<td class="tableborderzero"><input size="10" name="cumulative_gpa"> </td>
+</tr>
+<tr>
+<td class="tableborderzero" width="90">REMARKS </td>
+<td class="tableborderzero"></td>
+<td class="tableborderzero"></td>
+<td class="tableborderzero"></td>
+<td class="tableborderzero"></td>
+<td class="tableborderzero"><input size="10" name="remarks"> </td>
+</tr>
+</tbody></table>
 </em><em>
 <p></p>
 
@@ -346,20 +356,30 @@ function update_gpas( )
 
   document.forms['forrm'].elements['sum_credit_hours'].value = total_hours;
   document.forms['forrm'].elements['sum_grade_points'].value = sum_grade_points;
-
+  
+<!-- Remarks script by zamzameir -->
   if (total_hours > 0) {
     document.forms['forrm'].elements['term_gpa'].value = Math.round( sum_grade_points / total_hours * 10000) / 10000;
+	if (total_hours >= 15) {
+		if( Math.round( sum_grade_points / total_hours * 10000) / 10000 >= 3.5) {
+			document.forms['forrm'].elements['remarks'].value = "DEAN'S LIST";
+		} else {
+			document.forms['forrm'].elements['remarks'].value = "N/A";
+		}
+	}
+	else {
+		document.forms['forrm'].elements['remarks'].value = "N/A";
+	}
   } else {
     document.forms['forrm'].elements['term_gpa'].value = "";
   }
-
-  document.forms['forrm'].elements['cumulative_gpa'].value = Math.round( 10000 * (sum_grade_points + gpa*credits) / (credits + total_hours) ) / 10000;
+  
+	document.forms['forrm'].elements['cumulative_gpa'].value = Math.round( 10000 * (sum_grade_points + gpa*credits) / (credits + total_hours) ) / 10000;
 }
-
 
 </script>
 
-<br><br>
+<br>
 <h3>26/07/2018 - Support Latest IIUM Grading System</h3><h3>
 </h3><h4>by zamzameir</h4></p></center>
 </h5></em></form></font><iframe src="./calc_files/userData.htm" style="position: absolute; top: -100px; left: -100px; z-index: -10; border: none; visibility: hidden; width: 1px; height: 1px;"></iframe><iframe src="./calc_files/register_server_layer.htm" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;"></iframe><iframe style="position: absolute; width: 1px; height: 1px; top: 0px; left: 0px; visibility: hidden;"></iframe><sfmsg id="sfMsgId" data="{&quot;imageCount&quot;:0,&quot;ip&quot;:&quot;1.1.1.1&quot;}"></sfmsg></body></html>
