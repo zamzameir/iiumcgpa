@@ -303,7 +303,6 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 
 <script language="javascript">
 
-
 function update_gp( field, grade_point )
 {
   var textfield = "grade_gp_"+field;
@@ -375,7 +374,7 @@ function update_gpas( )
   if (total_hours > 0) {
     document.forms['forrm'].elements['term_gpa'].value = Math.round( sum_grade_points / total_hours * 10000) / 10000;
 	if (total_hours >= 15) {
-		if( Math.round( sum_grade_points / total_hours * 10000) / 10000 >= 3.5) {
+		if(Math.round( sum_grade_points / total_hours * 10000) / 10000 >= 3.5) {
 			document.forms['forrm'].elements['remarks'].value = "DEAN'S LIST";
 		} else {
 			document.forms['forrm'].elements['remarks'].value = "N/A";
