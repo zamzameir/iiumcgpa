@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- Originally from http://www.utar.edu.my/fegt/file/calc.htm -->
+<!-- https://github.com/zamzameir/iiumcgpa -->
 <!-- Provide support and compatibility for IIUM Grading System -->
 <html>
 <head>
@@ -49,7 +50,8 @@
 <td class="tableborderzero">* </td>
 <td class="tableborderzero">Credit Hours </td>
 <td class="tableborderzero">= </td>
-<td class="tableborderzero">Grade Points </td></tr>
+<td class="tableborderzero">Grade Points </td>
+<td class="tableborderzero">Subject Status </td></tr>
 <tr>
 <td class="tableborderzero" width="90">1&nbsp;&nbsp;&nbsp; <select onchange="update_gp(1, this.options[this.selectedIndex].value)" name="grade_1"> <option value="" selected="">
 Select</option> <option value="4.00">A</option> <option value="3.67">
@@ -63,7 +65,8 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 3</option> <option value="4.0">4</option> <option value="5.0">5</option> <option value="6.0">6</option> <option value="9.0">9</option></select></td>
 
 <td class="tableborderzero">= </td>
-<td class="tableborderzero"><input size="5" name="gp_1"> </td></tr>
+<td class="tableborderzero"><input size="5" name="gp_1"> </td>
+<td class="tableborderzero"><input size="8" name="status_1"> </td></tr>
 <tr>
 <td class="tableborderzero" width="90">2&nbsp;&nbsp;&nbsp; <select onchange="update_gp(2, this.options[this.selectedIndex].value)" name="grade_2"> <option value="" selected="">
 Select</option> <option value="4.00">A</option> <option value="3.67">
@@ -77,7 +80,8 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 3</option> <option value="4.0">4</option> <option value="5.0">5</option> <option value="6.0">6</option> <option value="9.0">9</option></select></td>
 
 <td class="tableborderzero">= </td>
-<td class="tableborderzero"><input size="5" name="gp_2"> </td></tr>
+<td class="tableborderzero"><input size="5" name="gp_2"> </td>
+<td class="tableborderzero"><input size="8" name="status_2"> </td></tr>
 <tr>
 <td class="tableborderzero" width="90">3&nbsp;&nbsp;&nbsp; <select onchange="update_gp(3, this.options[this.selectedIndex].value)" name="grade_3"> <option value="" selected="">
 Select</option> <option value="4.00">A</option> <option value="3.67">
@@ -91,7 +95,8 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 3</option> <option value="4.0">4</option> <option value="5.0">5</option> <option value="6.0">6</option> <option value="9.0">9</option></select></td>
 
 <td class="tableborderzero">= </td>
-<td class="tableborderzero"><input size="5" name="gp_3"> </td></tr>
+<td class="tableborderzero"><input size="5" name="gp_3"> </td>
+<td class="tableborderzero"><input size="8" name="status_3"> </td></tr>
 <tr>
 <td class="tableborderzero" width="90">4&nbsp;&nbsp;&nbsp; <select onchange="update_gp(4, this.options[this.selectedIndex].value)" name="grade_4"> <option value="" selected="">
 Select</option> <option value="4.00">A</option> <option value="3.67">
@@ -105,7 +110,8 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 3</option> <option value="4.0">4</option> <option value="5.0">5</option> <option value="6.0">6</option> <option value="9.0">9</option></select></td>
 
 <td class="tableborderzero">= </td>
-<td class="tableborderzero"><input size="5" name="gp_4"> </td></tr>
+<td class="tableborderzero"><input size="5" name="gp_4"> </td>
+<td class="tableborderzero"><input size="8" name="status_4"> </td></tr>
 <tr>
 <td class="tableborderzero" width="90">5&nbsp;&nbsp;&nbsp; <select onchange="update_gp(5, this.options[this.selectedIndex].value)" name="grade_5"> <option value="" selected="">
 Select</option> <option value="4.00">A</option> <option value="3.67">
@@ -119,7 +125,8 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 3</option> <option value="4.0">4</option> <option value="5.0">5</option> <option value="6.0">6</option> <option value="9.0">9</option></select></td>
 
 <td class="tableborderzero">= </td>
-<td class="tableborderzero"><input size="5" name="gp_5"> </td></tr>
+<td class="tableborderzero"><input size="5" name="gp_5"> </td>
+<td class="tableborderzero"><input size="8" name="status_5"> </td></tr>
 <tr>
 <td class="tableborderzero" width="90">6&nbsp;&nbsp;&nbsp; <select onchange="update_gp(6, this.options[this.selectedIndex].value)" name="grade_6"> <option value="" selected="">
 Select</option> <option value="4.00">A</option> <option value="3.67">
@@ -133,7 +140,8 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 3</option> <option value="4.0">4</option> <option value="5.0">5</option> <option value="6.0">6</option> <option value="9.0">9</option></select></td>
 
 <td class="tableborderzero">= </td>
-<td class="tableborderzero"><input size="5" name="gp_6"> </td></tr>
+<td class="tableborderzero"><input size="5" name="gp_6"> </td>
+<td class="tableborderzero"><input size="8" name="status_6"> </td></tr>
 <tr>
 <td class="tableborderzero" width="90">7&nbsp;&nbsp;&nbsp; <select onchange="update_gp(7, this.options[this.selectedIndex].value)" name="grade_7"> <option value="" selected="">
 Select</option> <option value="4.00">A</option> <option value="3.67">
@@ -147,7 +155,8 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 3</option> <option value="4.0">4</option> <option value="5.0">5</option> <option value="6.0">6</option> <option value="9.0">9</option></select></td>
 
 <td class="tableborderzero">= </td>
-<td class="tableborderzero"><input size="5" name="gp_7"> </td></tr>
+<td class="tableborderzero"><input size="5" name="gp_7"> </td>
+<td class="tableborderzero"><input size="8" name="status_7"> </td></tr>
 <tr>
 <td class="tableborderzero" width="90">8&nbsp;&nbsp;&nbsp; <select onchange="update_gp(8, this.options[this.selectedIndex].value)" name="grade_8"> <option value="" selected="">
 Select</option> <option value="4.00">A</option> <option value="3.67">
@@ -161,7 +170,8 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 3</option> <option value="4.0">4</option> <option value="5.0">5</option> <option value="6.0">6</option> <option value="9.0">9</option></select></td>
 
 <td class="tableborderzero">= </td>
-<td class="tableborderzero"><input size="5" name="gp_8"> </td></tr>
+<td class="tableborderzero"><input size="5" name="gp_8"> </td>
+<td class="tableborderzero"><input size="8" name="status_8"> </td></tr>
 <tr>
 <td class="tableborderzero" width="90">9&nbsp;&nbsp;&nbsp; <select onchange="update_gp(9, this.options[this.selectedIndex].value)" name="grade_9"> <option value="" selected="">
 Select</option> <option value="4.00">A</option> <option value="3.67">
@@ -175,7 +185,8 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 3</option> <option value="4.0">4</option> <option value="5.0">5</option> <option value="6.0">6</option> <option value="9.0">9</option></select></td>
 
 <td class="tableborderzero">= </td>
-<td class="tableborderzero"><input size="5" name="gp_9"> </td></tr>
+<td class="tableborderzero"><input size="5" name="gp_9"> </td>
+<td class="tableborderzero"><input size="8" name="status_9"> </td></tr>
 <tr>
 <td class="tableborderzero" width="90">10&nbsp; <select onchange="update_gp(10, this.options[this.selectedIndex].value)" name="grade_10"> <option value="" selected="">
 Select</option> <option value="4.00">A</option> <option value="3.67">
@@ -189,7 +200,8 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 3</option> <option value="4.0">4</option> <option value="5.0">5</option> <option value="6.0">6</option> <option value="9.0">9</option></select></td>
 
 <td class="tableborderzero">= </td>
-<td class="tableborderzero"><input size="5" name="gp_10"> </td></tr>
+<td class="tableborderzero"><input size="5" name="gp_10"> </td>
+<td class="tableborderzero"><input size="8" name="status_10"> </td></tr>
 
 <tr><td class="tableborderzero" width="90">11&nbsp; <select onchange="update_gp(11, this.options[this.selectedIndex].value)" name="grade_11"> <option value="" selected="">
 Select</option> <option value="4.00">A</option> <option value="3.67">
@@ -203,7 +215,8 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 3</option> <option value="4.0">4</option> <option value="5.0">5</option> <option value="6.0">6</option> <option value="9.0">9</option></select></td>
 
 <td class="tableborderzero">= </td>
-<td class="tableborderzero"><input size="5" name="gp_11"> </td></tr>
+<td class="tableborderzero"><input size="5" name="gp_11"> </td>
+<td class="tableborderzero"><input size="8" name="status_11"> </td></tr>
 
 <tr><td class="tableborderzero" width="90">12&nbsp; <select onchange="update_gp(12, this.options[this.selectedIndex].value)" name="grade_12"> <option value="" selected="">
 Select</option> <option value="4.00">A</option> <option value="3.67">
@@ -217,7 +230,8 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 3</option> <option value="4.0">4</option> <option value="5.0">5</option> <option value="6.0">6</option> <option value="9.0">9</option></select></td>
 
 <td class="tableborderzero">= </td>
-<td class="tableborderzero"><input size="5" name="gp_12"> </td></tr>
+<td class="tableborderzero"><input size="5" name="gp_12"> </td>
+<td class="tableborderzero"><input size="8" name="status_12"> </td></tr>
 
 <tr><td class="tableborderzero" width="90">13&nbsp; <select onchange="update_gp(13, this.options[this.selectedIndex].value)" name="grade_13"> <option value="" selected="">
 Select</option> <option value="4.00">A</option> <option value="3.67">
@@ -231,7 +245,8 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 3</option> <option value="4.0">4</option> <option value="5.0">5</option> <option value="6.0">6</option> <option value="9.0">9</option></select></td>
 
 <td class="tableborderzero">= </td>
-<td class="tableborderzero"><input size="5" name="gp_13"> </td></tr>
+<td class="tableborderzero"><input size="5" name="gp_13"> </td>
+<td class="tableborderzero"><input size="8" name="status_13"> </td></tr>
 
 <tr><td class="tableborderzero" width="90">14&nbsp; <select onchange="update_gp(14, this.options[this.selectedIndex].value)" name="grade_14"> <option value="" selected="">
 Select</option> <option value="4.00">A</option> <option value="3.67">
@@ -245,7 +260,8 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 3</option> <option value="4.0">4</option> <option value="5.0">5</option> <option value="6.0">6</option> <option value="9.0">9</option></select></td>
 
 <td class="tableborderzero">= </td>
-<td class="tableborderzero"><input size="5" name="gp_14"> </td></tr>
+<td class="tableborderzero"><input size="5" name="gp_14"> </td>
+<td class="tableborderzero"><input size="8" name="status_14"> </td></tr>
 
 <tr><td class="tableborderzero" width="90">15&nbsp; <select onchange="update_gp(15, this.options[this.selectedIndex].value)" name="grade_15"> <option value="" selected="">
 Select</option> <option value="4.00">A</option> <option value="3.67">
@@ -259,7 +275,8 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 3</option> <option value="4.0">4</option> <option value="5.0">5</option> <option value="6.0">6</option> <option value="9.0">9</option></select></td>
 
 <td class="tableborderzero">= </td>
-<td class="tableborderzero"><input size="5" name="gp_15"> </td></tr>
+<td class="tableborderzero"><input size="5" name="gp_15"> </td>
+<td class="tableborderzero"><input size="8" name="status_15"> </td></tr>
 <tr>
 <td class="tableborderzero" width="90">
 </td></tr>
@@ -304,36 +321,53 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 
 <script language="javascript">
 
-function update_gp ( field, grade_point ) {
+function update_gp (field, grade_point) {
 	var textfield = "grade_gp_"+field;
 
 	document.forms['forrm'].elements[textfield].value = grade_point;
 
-	update_hours( field );
+	update_hours(field);
 }
 
-function update_hours ( field ) {
+function update_hours (field) {
 	var gradefield = "";
+	var statusfield = "";
 	var credit_hours = "";
 	var grade = "";
 	var gp = "";
+	var status = "";
 	var hours = "";
 
 	credit_hours = "points_"+field;
 	gradefield = "gp_"+field;
 	grade = "grade_gp_"+field;
+	statusfield = "status_"+field;
 
 	hours = document.forms['forrm'].elements[credit_hours].options[document.forms['forrm'].elements[credit_hours].selectedIndex].value;
 	gp = document.forms['forrm'].elements[grade].value;
 
+	<!-- Point and subject status update -->
 	if ((gp != "") && (hours != -0.5)) {
-		document.forms['forrm'].elements[gradefield].value = Math.round( gp * hours * 100) / 100;
+		document.forms['forrm'].elements[gradefield].value = Math.round(gp * hours * 100) / 100;
+		<!-- After clicking calc button -->
+		if (gp <= 1.0) {
+			document.forms['forrm'].elements[statusfield].value = "REPEAT";
+		} else {
+			document.forms['forrm'].elements[statusfield].value = "PASS";
+		}
+	} else if ((gp <= 1.0) && (hours == -0.5)) {
+		<!-- Before clicking calc button -->
+		document.forms['forrm'].elements[statusfield].value = "REPEAT";
+			if (gp == "") {
+				document.forms['forrm'].elements[statusfield].value = "N/A";
+			}
 	} else {
 		document.forms['forrm'].elements[gradefield].value = "";
+		document.forms['forrm'].elements[statusfield].value = "PASS";
 	}
 }
 
-function update_gpas ( ) {
+function update_gpas () {
 	var gradefield = "";
 	var credit_hours = "";
 	var gp = 0.0;
@@ -349,7 +383,7 @@ function update_gpas ( ) {
 	while (index <= 15) {
     
 		grade_name = "grade_"+index;
-		update_gp( index, document.forms['forrm'].elements[grade_name].options[document.forms['forrm'].elements[grade_name].selectedIndex].value);
+		update_gp(index, document.forms['forrm'].elements[grade_name].options[document.forms['forrm'].elements[grade_name].selectedIndex].value);
 
 		gradefield = "gp_"+index;
 		credit_hours = "points_"+index;
@@ -370,19 +404,19 @@ function update_gpas ( ) {
   
 	<!-- GPA -->
 	if (total_hours > 0) {
-		document.forms['forrm'].elements['term_gpa'].value = Math.round( sum_grade_points / total_hours * 1000) / 1000;
+		document.forms['forrm'].elements['term_gpa'].value = Math.round(sum_grade_points / total_hours * 1000) / 1000;
 		if (total_hours >= 15) {
-			if (Math.round( sum_grade_points / total_hours * 1000) / 1000 >= 3.5) {
+			if (Math.round(sum_grade_points / total_hours * 1000) / 1000 >= 3.5) {
 				document.forms['forrm'].elements['remarks'].value = "DEAN'S LIST";
-			} else if (Math.round( sum_grade_points / total_hours * 1000) / 1000 >= 2.0) {
+			} else if (Math.round(sum_grade_points / total_hours * 1000) / 1000 >= 2.0) {
 				document.forms['forrm'].elements['remarks'].value = "PASS";
-			} else if (Math.round( sum_grade_points / total_hours * 1000) / 1000 < 2.0) {
+			} else if (Math.round(sum_grade_points / total_hours * 1000) / 1000 < 2.0) {
 				document.forms['forrm'].elements['remarks'].value = "PROVISIONAL PASS";
 			}
 		} else if (total_hours < 15) {
-			if (Math.round( sum_grade_points / total_hours * 1000) / 1000 >= 2.0) {
+			if (Math.round(sum_grade_points / total_hours * 1000) / 1000 >= 2.0) {
 				document.forms['forrm'].elements['remarks'].value = "PASS";
-			} else if (Math.round( sum_grade_points / total_hours * 1000) / 1000 < 2.0) {
+			} else if (Math.round(sum_grade_points / total_hours * 1000) / 1000 < 2.0) {
 				document.forms['forrm'].elements['remarks'].value = "PROVISIONAL PASS";
 			}
 		}
@@ -391,9 +425,9 @@ function update_gpas ( ) {
 	}
   
 	<!-- CGPA-->
-	document.forms['forrm'].elements['cumulative_gpa'].value = Math.round( 1000 * (sum_grade_points + gpa*credits) / (credits + total_hours) ) / 1000;
+	document.forms['forrm'].elements['cumulative_gpa'].value = Math.round(1000 * (sum_grade_points + gpa*credits) / (credits + total_hours)) / 1000;
 	
-	if (Math.round( 1000 * (sum_grade_points + gpa*credits) / (credits + total_hours) ) / 1000 < 2.0) {
+	if (Math.round(1000 * (sum_grade_points + gpa*credits) / (credits + total_hours)) / 1000 < 2.0) {
 		document.forms['forrm'].elements['remarks'].value = "DISMISS";
 	}
 }
@@ -401,8 +435,13 @@ function update_gpas ( ) {
 </script>
 
 <br>
-<h3>Support Latest IIUM Grading System</h3><h3>
-</h3><h4>by zamzameir</h4></p></center>
+<a href="https://goo.gl/vLHmcU"><button>Refresh</button></a>
+<!--<h3>Support Latest IIUM Grading System</h3><h3>-->
+</h3><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zamzameir ©2018</h4></p></center>
 </h5></em></form></font>
 
 <iframe src="" style="position: absolute; top: -100px; left: -100px; z-index: -10; border: none; visibility: hidden; width: 1px; height: 1px;"></iframe>
