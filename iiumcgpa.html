@@ -3,6 +3,7 @@
 <!-- Provide support and compatibility for IIUM Grading System -->
 <html>
 <head>
+<style></style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta style="visibility: hidden !important; display: block !important; width: 0px !important; height: 0px !important; border-style: none !important;">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -272,7 +273,7 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 <td class="tableborderzero"></td>
 <td class="tableborderzero"><input size="5" name="sum_credit_hours"> </td>
 <td class="tableborderzero"></td>
-<td class="tableborderzero"><input size="10" name="sum_grade_points"> </td></tr>
+<td class="tableborderzero"><input size="15" name="sum_grade_points"> </td></tr>
 
 <tr>
 <td class="tableborderzero" width="90">NEW GPA </td>
@@ -280,14 +281,14 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 <td class="tableborderzero"></td>
 <td class="tableborderzero"></td>
 <td class="tableborderzero"></td>
-<td class="tableborderzero"><input size="10" name="term_gpa"> </td></tr>
+<td class="tableborderzero"><input size="15" name="term_gpa"> </td></tr>
 <tr>
 <td class="tableborderzero" width="90">NEW CGPA </td>
 <td class="tableborderzero"></td>
 <td class="tableborderzero"></td>
 <td class="tableborderzero"></td>
 <td class="tableborderzero"></td>
-<td class="tableborderzero"><input size="10" name="cumulative_gpa"> </td>
+<td class="tableborderzero"><input size="15" name="cumulative_gpa"> </td>
 </tr>
 <tr>
 <td class="tableborderzero" width="90">REMARKS </td>
@@ -295,7 +296,7 @@ Select</option> <option value="0.5">0.5</option> <option value="1.0">1</option> 
 <td class="tableborderzero"></td>
 <td class="tableborderzero"></td>
 <td class="tableborderzero"></td>
-<td class="tableborderzero"><input size="10" name="remarks"> </td>
+<td class="tableborderzero"><input size="15" name="remarks"> </td>
 </tr>
 </tbody></table>
 </em><em>
@@ -370,30 +371,41 @@ function update_gpas( )
   document.forms['forrm'].elements['sum_credit_hours'].value = total_hours;
   document.forms['forrm'].elements['sum_grade_points'].value = sum_grade_points;
   
-<!-- Remarks script by zamzameir -->
+<!-- GPA -->
   if (total_hours > 0) {
-    document.forms['forrm'].elements['term_gpa'].value = Math.round( sum_grade_points / total_hours * 10000) / 10000;
+    document.forms['forrm'].elements['term_gpa'].value = Math.round( sum_grade_points / total_hours * 1000) / 1000;
 	if (total_hours >= 15) {
-		if(Math.round( sum_grade_points / total_hours * 10000) / 10000 >= 3.5) {
+		if(Math.round( sum_grade_points / total_hours * 1000) / 1000 >= 3.5) {
 			document.forms['forrm'].elements['remarks'].value = "DEAN'S LIST";
-		} else {
-			document.forms['forrm'].elements['remarks'].value = "N/A";
+		} else if (Math.round( sum_grade_points / total_hours * 1000) / 1000 >= 2.0){
+			document.forms['forrm'].elements['remarks'].value = "PASS";
+		} else if (Math.round( sum_grade_points / total_hours * 1000) / 1000 < 2.0){
+			document.forms['forrm'].elements['remarks'].value = "PROVISIONAL PASS";
+		}
+	} 
+	else if(total_hours < 15){
+		if(Math.round( sum_grade_points / total_hours * 1000) / 1000 >= 2.0) {
+			document.forms['forrm'].elements['remarks'].value = "PASS";
+		} else if (Math.round( sum_grade_points / total_hours * 1000) / 1000 < 2.0){
+			document.forms['forrm'].elements['remarks'].value = "PROVISIONAL PASS";
 		}
 	}
-	else {
-		document.forms['forrm'].elements['remarks'].value = "N/A";
-	}
   } else {
-    document.forms['forrm'].elements['term_gpa'].value = "";
+		document.forms['forrm'].elements['term_gpa'].value = "";
   }
   
-	document.forms['forrm'].elements['cumulative_gpa'].value = Math.round( 10000 * (sum_grade_points + gpa*credits) / (credits + total_hours) ) / 10000;
+<!-- CGPA-->
+	document.forms['forrm'].elements['cumulative_gpa'].value = Math.round( 1000 * (sum_grade_points + gpa*credits) / (credits + total_hours) ) / 1000;
+	
+	if(Math.round( 1000 * (sum_grade_points + gpa*credits) / (credits + total_hours) ) / 1000 < 2.0){
+		document.forms['forrm'].elements['remarks'].value = "DISMISS";
+	}
 }
 
 </script>
 
 <br>
-<h3>26/07/2018 - Support Latest IIUM Grading System</h3><h3>
+<h3>Support Latest IIUM Grading System</h3><h3>
 </h3><h4>by zamzameir</h4></p></center>
 </h5></em></form></font>
 
