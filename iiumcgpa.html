@@ -1,43 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <!-- Originally from http://www.utar.edu.my/fegt/file/calc.htm -->
 <!-- https://github.com/zamzameir/iiumcgpa -->
 <!-- Provide support and compatibility for IIUM Grading System -->
 <html>
 <head>
-<style>
-body, html {
-    height: 100%;
-	margin: 0;
-}
-
-.bg { 
-    /* The image used */
-    background-image: url("images/");
-
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.tb1 {
-    background-color : green;
-}
-</style>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta style="visibility: hidden !important; display: block !important; width: 0px !important; height: 0px !important; border-style: none !important;">
 <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-<script type="text/javascript" src="./calc_files/sf_main.jsp"></script><script type="text/javascript" src="./calc_files/sf_preloader.jsp"></script>
-<script type="text/javascript" src="./calc_files/sf_code.jsp"></script><script type="text/javascript" src="./calc_files/base_single_icon.js"></script>
-<link rel="stylesheet" href="http://www.superfish.com/ws/css/main.css?v=13.1.4.90">
 <link rel="shortcut icon" href="images/icon.ico" />
-<script type="text/javascript" src="./calc_files/get.jsp"></script>
-<script src="./calc_files/ngram_id_dict.json" id="SF_ngram_call" type="text/javascript"></script>
 </head>
-<body class="bg"">
-<embed id="__IDM__" type="application/x-idm-downloader" width="1" height="1" style="visibility: hidden !important; display: block !important; width: 1px !important; height: 1px !important; border-style: none !important; position: absolute !important; top: 0px !important; left: 0px !important;">
+<body>
 <center>
 <title>IIUM CGPA CALC</title>
 <font color="#000000"><em>
@@ -368,25 +338,29 @@ function update_hours (field) {
 	gp = document.forms['forrm'].elements[grade].value;
 
 	<!-- Point and subject status update
-	if ((gp != "") && (hours != -0.5)) {
-		document.forms['forrm'].elements[gradefield].value = Math.round(gp * hours * 100) / 100;
-		<!-- After clicking calc button -->
-		if (gp <= 1.0) {
-			document.forms['forrm'].elements[statusfield].value = "REPEAT";
-		} else {
-			document.forms['forrm'].elements[statusfield].value = "PASS";
-			<!--elements[statusfield].toggleClass("tb1");
-		}
+	if (hours != -0.5) {
+		if (gp != "") {
+			document.forms['forrm'].elements[gradefield].value = Math.round(gp * hours * 100) / 100;
+			document.forms['forrm'].elements[statusfield].value = "";
+			
+			<!-- After clicking calc button -->
+			if (gp <= 1.0) {
+				document.forms['forrm'].elements[statusfield].value = "REPEAT";
+			} else {
+				document.forms['forrm'].elements[statusfield].value = "PASS";
+			}
+		}		
 	} else if ((gp <= 1.0) && (hours == -0.5)) {
-		<!-- Before clicking calc button
-		document.forms['forrm'].elements[statusfield].value = "REPEAT";
+		if (hours == -0.5) {
+			<!-- Before clicking calc button
+			document.forms['forrm'].elements[statusfield].value = "REPEAT";
 			if (gp == "") {
 				document.forms['forrm'].elements[statusfield].value = "";
 			}
+		}	
 	} else {
 		document.forms['forrm'].elements[gradefield].value = "";
 		document.forms['forrm'].elements[statusfield].value = "PASS";
-		<!--elements[statusfield].toggleClass("tb1");
 	}
 }
 
@@ -435,14 +409,14 @@ function update_gpas () {
 				document.forms['forrm'].elements['remarks'].value = "PASS";
 			} else if (Math.round(sum_grade_points / total_hours * 1000) / 1000 < 2.0) {
 				document.forms['forrm'].elements['remarks'].value = "PROVISIONAL PASS";
-			}
+			}			
 		} else if (total_hours < 15) {
 			if (Math.round(sum_grade_points / total_hours * 1000) / 1000 >= 2.0) {
 				document.forms['forrm'].elements['remarks'].value = "PASS";
 			} else if (Math.round(sum_grade_points / total_hours * 1000) / 1000 < 2.0) {
 				document.forms['forrm'].elements['remarks'].value = "PROVISIONAL PASS";
 			}
-		}
+		}	
 	} else {
 		document.forms['forrm'].elements['term_gpa'].value = "";
 	}
@@ -459,13 +433,11 @@ function update_gpas () {
 
 <br>
 <a href="https://goo.gl/vLHmcU"><button>Refresh</button></a>
-<!--<h3>Support Latest IIUM Grading System</h3><h3>-->
-</h3><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zamzameir ©2018</h4></p></center>
-</h5></em></form></font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zamzameir ©2018</h4></center>
 
 <iframe src="" style="position: absolute; top: -100px; left: -100px; z-index: -10; border: none; visibility: hidden; width: 1px; height: 1px;"></iframe>
 <iframe src="" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;"></iframe>
