@@ -106,6 +106,7 @@ function update_gpas () {
 		}	
 	} else {
 		document.forms['forrm'].elements['term_gpa'].value = "";
+		document.forms['forrm'].elements['remarks'].value = "";
 	}
   
 	<!-- CGPA
