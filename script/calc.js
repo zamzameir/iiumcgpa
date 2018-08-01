@@ -14,48 +14,101 @@ function update_hours (field) {
 	var gp = "";
 	var status = "";
 	var hours = "";
+	var credited = "";
+	var earned = "";
+	var score = "";
 
 	credit_hours = "points_"+field;
 	gradefield = "gp_"+field;
 	grade = "grade_gp_"+field;
 	statusfield = "status_"+field;
+	creditedfield = "credited_"+field;
+	earnedfield = "earned_"+field;
+	scorefield = "score_"+field;
 
 	hours = document.forms['forrm'].elements[credit_hours].options[document.forms['forrm'].elements[credit_hours].selectedIndex].value;
 	gp = document.forms['forrm'].elements[grade].value;
 
+	if (gp == 4.0) {document.forms['forrm'].elements[scorefield].value = "80-100";}
+	else if (gp == 3.67){document.forms['forrm'].elements[scorefield].value = "75-79";}
+	else if (gp == 3.33){document.forms['forrm'].elements[scorefield].value = "70-74";}
+	else if (gp == 3.00){document.forms['forrm'].elements[scorefield].value = "65-69";}
+	else if (gp == 2.67){document.forms['forrm'].elements[scorefield].value = "60-64";}
+	else if (gp == 2.33){document.forms['forrm'].elements[scorefield].value = "55-59";}
+	else if (gp == 2.00){document.forms['forrm'].elements[scorefield].value = "50-54";}
+	else if (gp == 1.67){document.forms['forrm'].elements[scorefield].value = "45-49";}
+	else if (gp == 1.33){document.forms['forrm'].elements[scorefield].value = "40-44";}
+	else if (gp == 1.00){document.forms['forrm'].elements[scorefield].value = "35-39";}
+	else if (gp == 0.0){document.forms['forrm'].elements[scorefield].value = "0-34";}
+
+
 	<!-- Point and subject status update
 	if (hours != -0.5) {
-		if (gp != "") {
+		if (gp == "") {
+			document.forms['forrm'].elements[gradefield].value = "";
 			document.forms['forrm'].elements[statusfield].value = "";
-			
-			<!-- After clicking calc button -->
-			if (gp <= 1.0) {
-				document.forms['forrm'].elements[gradefield].value = Math.round(gp * hours * 100) / 100;
-				document.forms['forrm'].elements[statusfield].value = "REPEAT";
-			} else {
+			document.forms['forrm'].elements[creditedfield].value = "";
+			document.forms['forrm'].elements[earnedfield].value = "";
+			document.forms['forrm'].elements[scorefield].value = "";
+		}
+	
+		<!-- after calc
+		else if (gp != ""){
+			if ((gp > 2.67) && (gp <= 4.0)){
 				document.forms['forrm'].elements[gradefield].value = Math.round(gp * hours * 100) / 100;
 				document.forms['forrm'].elements[statusfield].value = "PASS";
+				document.forms['forrm'].elements[creditedfield].value = "YES";
+				document.forms['forrm'].elements[earnedfield].value = "YES";
 			}
-		} else if (gp == "") {
+			else if ((gp > 1.67) && (gp <= 2.67)){
+				document.forms['forrm'].elements[gradefield].value = Math.round(gp * hours * 100) / 100;
+				document.forms['forrm'].elements[statusfield].value = "CONDITIONAL PASS";
+				document.forms['forrm'].elements[creditedfield].value = "YES";
+				document.forms['forrm'].elements[earnedfield].value = "YES";
+			}
+			else if (gp <= 1.67){
+				document.forms['forrm'].elements[gradefield].value = Math.round(gp * hours * 100) / 100;
+				document.forms['forrm'].elements[statusfield].value = "FAIL / REPEAT";
+				document.forms['forrm'].elements[creditedfield].value = "YES";
+				document.forms['forrm'].elements[earnedfield].value = "NO";
+			}
+		}
+
+	}
+
+
+	else if (hours == -0.5) {
+		if (gp == "") {
 			document.forms['forrm'].elements[gradefield].value = "";
 			document.forms['forrm'].elements[statusfield].value = "";
+			document.forms['forrm'].elements[creditedfield].value = "";
+			document.forms['forrm'].elements[earnedfield].value = "";
+			document.forms['forrm'].elements[scorefield].value = "";
 		}
-
-	} else if (gp <= 1.0) {
-		if (hours == -0.5) {
-			<!-- Before clicking calc button
-			document.forms['forrm'].elements[gradefield].value = "";
-			document.forms['forrm'].elements[statusfield].value = "REPEAT";
-			if (gp == "") {
-				document.forms['forrm'].elements[statusfield].value = "";
+	
+		<!-- before calc
+		else if (gp != ""){
+			if ((gp > 2.67) && (gp <= 4.0)){
 				document.forms['forrm'].elements[gradefield].value = "";
+				document.forms['forrm'].elements[statusfield].value = "PASS";
+				document.forms['forrm'].elements[creditedfield].value = "YES";
+				document.forms['forrm'].elements[earnedfield].value = "YES";
+			}
+			else if ((gp > 1.67) && (gp <= 2.67)){
+				document.forms['forrm'].elements[gradefield].value = "";
+				document.forms['forrm'].elements[statusfield].value = "CONDITIONAL PASS";
+				document.forms['forrm'].elements[creditedfield].value = "YES";
+				document.forms['forrm'].elements[earnedfield].value = "YES";
+			}
+			else if (gp <= 1.67){
+				document.forms['forrm'].elements[gradefield].value = "";
+				document.forms['forrm'].elements[statusfield].value = "FAIL / REPEAT";
+				document.forms['forrm'].elements[creditedfield].value = "YES";
+				document.forms['forrm'].elements[earnedfield].value = "NO";
 			}
 		}
-
-	} else {
-		document.forms['forrm'].elements[gradefield].value = "";
-		document.forms['forrm'].elements[statusfield].value = "PASS";
 	}
+	
 }
 
 function update_gpas () {
@@ -104,7 +157,7 @@ function update_gpas () {
 			} else if (Math.round(sum_grade_points / total_hours * 1000) / 1000 < 2.0) {
 				document.forms['forrm'].elements['remarks'].value = "PROVISIONAL PASS";
 			}			
-		} else if (total_hours < 15) {
+		} else if ((total_hours > 0) && (total_hours < 15)) {
 			if (Math.round(sum_grade_points / total_hours * 1000) / 1000 >= 2.0) {
 				document.forms['forrm'].elements['remarks'].value = "PASS";
 			} else if (Math.round(sum_grade_points / total_hours * 1000) / 1000 < 2.0) {
