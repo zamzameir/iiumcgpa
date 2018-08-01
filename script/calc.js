@@ -36,15 +36,22 @@ function update_hours (field) {
 				document.forms['forrm'].elements[gradefield].value = Math.round(gp * hours * 100) / 100;
 				document.forms['forrm'].elements[statusfield].value = "PASS";
 			}
-		}		
-	} else if ((gp <= 1.0) && (hours == -0.5)) {
+		} else if (gp == "") {
+			document.forms['forrm'].elements[gradefield].value = "";
+			document.forms['forrm'].elements[statusfield].value = "";
+		}
+
+	} else if (gp <= 1.0) {
 		if (hours == -0.5) {
 			<!-- Before clicking calc button
+			document.forms['forrm'].elements[gradefield].value = "";
 			document.forms['forrm'].elements[statusfield].value = "REPEAT";
 			if (gp == "") {
 				document.forms['forrm'].elements[statusfield].value = "";
+				document.forms['forrm'].elements[gradefield].value = "";
 			}
-		}	
+		}
+
 	} else {
 		document.forms['forrm'].elements[gradefield].value = "";
 		document.forms['forrm'].elements[statusfield].value = "PASS";
