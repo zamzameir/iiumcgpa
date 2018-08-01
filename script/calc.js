@@ -50,8 +50,7 @@ function update_hours (field) {
 			document.forms['forrm'].elements[creditedfield].value = "";
 			document.forms['forrm'].elements[earnedfield].value = "";
 			document.forms['forrm'].elements[scorefield].value = "";
-		}
-	
+		}	
 		<!-- after calc
 		else if (gp != ""){
 			if ((gp > 2.67) && (gp <= 4.0)){
@@ -73,10 +72,8 @@ function update_hours (field) {
 				document.forms['forrm'].elements[earnedfield].value = "NO";
 			}
 		}
-
 	}
-
-
+	
 	else if (hours == -0.5) {
 		if (gp == "") {
 			document.forms['forrm'].elements[gradefield].value = "";
@@ -84,8 +81,7 @@ function update_hours (field) {
 			document.forms['forrm'].elements[creditedfield].value = "";
 			document.forms['forrm'].elements[earnedfield].value = "";
 			document.forms['forrm'].elements[scorefield].value = "";
-		}
-	
+		}	
 		<!-- before calc
 		else if (gp != ""){
 			if ((gp > 2.67) && (gp <= 4.0)){
@@ -108,7 +104,6 @@ function update_hours (field) {
 			}
 		}
 	}
-	
 }
 
 function update_gpas () {
