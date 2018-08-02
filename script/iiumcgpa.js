@@ -144,13 +144,13 @@ function update_gpas () {
 			} else if (Math.round(sum_grade_points / total_hours * 1000) / 1000 >= 2.0) {
 				document.forms['forrm'].elements['remarks'].value = "PASS";
 			} else if (Math.round(sum_grade_points / total_hours * 1000) / 1000 < 2.0) {
-				document.forms['forrm'].elements['remarks'].value = "PROVISIONAL PASS";
+				document.forms['forrm'].elements['remarks'].value = "CONDITIONAL PASS";
 			}			
 		} else if ((total_hours > 0) && (total_hours < 15)) {
 			if (Math.round(sum_grade_points / total_hours * 1000) / 1000 >= 2.0) {
 				document.forms['forrm'].elements['remarks'].value = "PASS";
 			} else if (Math.round(sum_grade_points / total_hours * 1000) / 1000 < 2.0) {
-				document.forms['forrm'].elements['remarks'].value = "PROVISIONAL PASS";
+				document.forms['forrm'].elements['remarks'].value = "CONDITIONAL PASS";
 			}
 		}	
 	} else {

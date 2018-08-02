@@ -145,13 +145,13 @@ $update_gpas = new Func("update_gpas", function() use (&$document, &$update_gp, 
       } else if (_divide(call_method($Math, "round", _divide($sum_grade_points, $total_hours) * 1000.0), 1000.0) >= 2.0) {
         set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "PASS");
       } else if (_divide(call_method($Math, "round", _divide($sum_grade_points, $total_hours) * 1000.0), 1000.0) < 2.0) {
-        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "PROVISIONAL PASS");
+        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "CONDITIONAL PASS");
       }
     } else if ($total_hours > 0.0 && $total_hours < 15.0) {
       if (_divide(call_method($Math, "round", _divide($sum_grade_points, $total_hours) * 1000.0), 1000.0) >= 2.0) {
         set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "PASS");
       } else if (_divide(call_method($Math, "round", _divide($sum_grade_points, $total_hours) * 1000.0), 1000.0) < 2.0) {
-        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "PROVISIONAL PASS");
+        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "CONDITIONAL PASS");
       }
     }
 
