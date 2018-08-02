@@ -42,7 +42,7 @@ function update_hours (field) {
 	else if (gp == 0.0){document.forms['forrm'].elements[scorefield].value = "0-34";document.forms['forrm'].elements[statusfield].value = "REPEAT - FAIL";}
 
 
-	<!-- Point and subject status update
+	<!-- point and subject status update
 	if (hours != -0.5) {
 		if (gp == "") {
 			document.forms['forrm'].elements[gradefield].value = "";
