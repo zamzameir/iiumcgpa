@@ -28,37 +28,37 @@ $update_hours = new Func("update_hours", function($field = null) use (&$credited
   
   if (eq($gp, 4.0)) {
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), $scorefield), "value", "80 - 100");
-    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "PASS - EXCELLENT");
+    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "PASSED - EXCELLENT");
   } else if (eq($gp, 3.67)) {
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), $scorefield), "value", "75 - 79");
-    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "PASS - EXTREMELY GOOD");
+    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "PASSED - EXTREMELY GOOD");
   } else if (eq($gp, 3.33)) {
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), $scorefield), "value", "70 - 74");
-    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "PASS - VERY GOOD");
+    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "PASSED - VERY GOOD");
   } else if (eq($gp, 3.0)) {
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), $scorefield), "value", "65 - 69");
-    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "PASS - GOOD");
+    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "PASSED - GOOD");
   } else if (eq($gp, 2.67)) {
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), $scorefield), "value", "60 - 64");
-    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "PASS - FAIRLY GOOD");
+    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "CONDITIONAL PASS - FAIRLY GOOD");
   } else if (eq($gp, 2.33)) {
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), $scorefield), "value", "55 - 59");
-    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "PASS - SATISFACTORY");
+    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "CONDITIONAL PASS - SATISFACTORY");
   } else if (eq($gp, 2.0)) {
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), $scorefield), "value", "50 - 54");
-    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "PASS - QUITE SATISFACTORY");
+    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "CONDITIONAL PASS - QUITE SATISFACTORY");
   } else if (eq($gp, 1.67)) {
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), $scorefield), "value", "45 - 49");
-    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "REPEAT - POOR");
+    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "FAILED / REPEAT - POOR");
   } else if (eq($gp, 1.33)) {
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), $scorefield), "value", "40 - 44");
-    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "REPEAT - VERY POOR");
+    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "FAILED / REPEAT - VERY POOR");
   } else if (eq($gp, 1.0)) {
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), $scorefield), "value", "35 - 39");
-    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "REPEAT - EXTREMELY POOR");
+    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "FAILED / REPEAT - EXTREMELY POOR");
   } else if (eq($gp, 0.0)) {
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), $scorefield), "value", "0 - 34");
-    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "REPEAT - FAIL");
+    set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "FAILED / REPEAT");
   }
   
   if (!eq($hours, -0.5)) {

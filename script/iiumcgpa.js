@@ -29,17 +29,17 @@ function update_hours (field) {
 	hours = document.forms['forrm'].elements[credit_hours].options[document.forms['forrm'].elements[credit_hours].selectedIndex].value;
 	gp = document.forms['forrm'].elements[grade].value;
 
-	if (gp == 4.0) {document.forms['forrm'].elements[scorefield].value = "80 - 100";document.forms['forrm'].elements[statusfield].value = "PASS - EXCELLENT";}
-	else if (gp == 3.67){document.forms['forrm'].elements[scorefield].value = "75 - 79";document.forms['forrm'].elements[statusfield].value = "PASS - EXTREMELY GOOD";}
-	else if (gp == 3.33){document.forms['forrm'].elements[scorefield].value = "70 - 74";document.forms['forrm'].elements[statusfield].value = "PASS - VERY GOOD";}
-	else if (gp == 3.00){document.forms['forrm'].elements[scorefield].value = "65 - 69";document.forms['forrm'].elements[statusfield].value = "PASS - GOOD";}
-	else if (gp == 2.67){document.forms['forrm'].elements[scorefield].value = "60 - 64";document.forms['forrm'].elements[statusfield].value = "PASS - FAIRLY GOOD";}
-	else if (gp == 2.33){document.forms['forrm'].elements[scorefield].value = "55 - 59";document.forms['forrm'].elements[statusfield].value = "PASS - SATISFACTORY";}
-	else if (gp == 2.00){document.forms['forrm'].elements[scorefield].value = "50 - 54";document.forms['forrm'].elements[statusfield].value = "PASS - QUITE SATISFACTORY";}
-	else if (gp == 1.67){document.forms['forrm'].elements[scorefield].value = "45 - 49";document.forms['forrm'].elements[statusfield].value = "REPEAT - POOR";}
-	else if (gp == 1.33){document.forms['forrm'].elements[scorefield].value = "40 - 44";document.forms['forrm'].elements[statusfield].value = "REPEAT - VERY POOR";}
-	else if (gp == 1.00){document.forms['forrm'].elements[scorefield].value = "35 - 39";document.forms['forrm'].elements[statusfield].value = "REPEAT - EXTREMELY POOR";}
-	else if (gp == 0.0){document.forms['forrm'].elements[scorefield].value = "0 - 34";document.forms['forrm'].elements[statusfield].value = "REPEAT - FAIL";}
+	if (gp == 4.0) {document.forms['forrm'].elements[scorefield].value = "80 - 100";document.forms['forrm'].elements[statusfield].value = "PASSED - EXCELLENT";}
+	else if (gp == 3.67){document.forms['forrm'].elements[scorefield].value = "75 - 79";document.forms['forrm'].elements[statusfield].value = "PASSED - EXTREMELY GOOD";}
+	else if (gp == 3.33){document.forms['forrm'].elements[scorefield].value = "70 - 74";document.forms['forrm'].elements[statusfield].value = "PASSED - VERY GOOD";}
+	else if (gp == 3.00){document.forms['forrm'].elements[scorefield].value = "65 - 69";document.forms['forrm'].elements[statusfield].value = "PASSED - GOOD";}
+	else if (gp == 2.67){document.forms['forrm'].elements[scorefield].value = "60 - 64";document.forms['forrm'].elements[statusfield].value = "CONDITIONAL PASS - FAIRLY GOOD";}
+	else if (gp == 2.33){document.forms['forrm'].elements[scorefield].value = "55 - 59";document.forms['forrm'].elements[statusfield].value = "CONDITIONAL PASS - SATISFACTORY";}
+	else if (gp == 2.00){document.forms['forrm'].elements[scorefield].value = "50 - 54";document.forms['forrm'].elements[statusfield].value = "CONDITIONAL PASS - QUITE SATISFACTORY";}
+	else if (gp == 1.67){document.forms['forrm'].elements[scorefield].value = "45 - 49";document.forms['forrm'].elements[statusfield].value = "FAILED / REPEAT - POOR";}
+	else if (gp == 1.33){document.forms['forrm'].elements[scorefield].value = "40 - 44";document.forms['forrm'].elements[statusfield].value = "FAILED / REPEAT - VERY POOR";}
+	else if (gp == 1.00){document.forms['forrm'].elements[scorefield].value = "35 - 39";document.forms['forrm'].elements[statusfield].value = "FAILED / REPEAT - EXTREMELY POOR";}
+	else if (gp == 0.0){document.forms['forrm'].elements[scorefield].value = "0 - 34";document.forms['forrm'].elements[statusfield].value = "FAILED / REPEAT";}
 
 
 	<!-- point and subject status update
