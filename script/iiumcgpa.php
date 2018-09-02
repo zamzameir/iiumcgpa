@@ -69,11 +69,7 @@ $update_hours = new Func("update_hours", function($field = null) use (&$credited
       set(get(get(get(get($document, "forms"), "forrm"), "elements"), $earnedfield), "value", "");
       set(get(get(get(get($document, "forms"), "forrm"), "elements"), $scorefield), "value", "");
     } else if (!eq($gp, "")) {
-      if ($gp > 2.67 && $gp <= 4.0) {
-        set(get(get(get(get($document, "forms"), "forrm"), "elements"), $gradefield), "value", _divide(call_method($Math, "round", to_number($gp) * to_number($hours) * 100.0), 100.0));
-        set(get(get(get(get($document, "forms"), "forrm"), "elements"), $creditedfield), "value", "YES");
-        set(get(get(get(get($document, "forms"), "forrm"), "elements"), $earnedfield), "value", "YES");
-      } else if ($gp > 1.67 && $gp <= 2.67) {
+      if ($gp > 1.67 && $gp <= 4.0) {
         set(get(get(get(get($document, "forms"), "forrm"), "elements"), $gradefield), "value", _divide(call_method($Math, "round", to_number($gp) * to_number($hours) * 100.0), 100.0));
         set(get(get(get(get($document, "forms"), "forrm"), "elements"), $creditedfield), "value", "YES");
         set(get(get(get(get($document, "forms"), "forrm"), "elements"), $earnedfield), "value", "YES");
@@ -94,11 +90,7 @@ $update_hours = new Func("update_hours", function($field = null) use (&$credited
       set(get(get(get(get($document, "forms"), "forrm"), "elements"), $earnedfield), "value", "");
       set(get(get(get(get($document, "forms"), "forrm"), "elements"), $scorefield), "value", "");
     } else if (!eq($gp, "")) {
-      if ($gp > 2.67 && $gp <= 4.0) {
-        set(get(get(get(get($document, "forms"), "forrm"), "elements"), $gradefield), "value", "");
-        set(get(get(get(get($document, "forms"), "forrm"), "elements"), $creditedfield), "value", "YES");
-        set(get(get(get(get($document, "forms"), "forrm"), "elements"), $earnedfield), "value", "YES");
-      } else if ($gp > 1.67 && $gp <= 2.67) {
+      if ($gp > 1.67 && $gp <= 4.0) {
         set(get(get(get(get($document, "forms"), "forrm"), "elements"), $gradefield), "value", "");
         set(get(get(get(get($document, "forms"), "forrm"), "elements"), $creditedfield), "value", "YES");
         set(get(get(get(get($document, "forms"), "forrm"), "elements"), $earnedfield), "value", "YES");

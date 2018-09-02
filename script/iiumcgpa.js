@@ -53,12 +53,7 @@ function update_hours (field) {
 		}	
 		<!-- after calc
 		else if (gp != ""){
-			if ((gp > 2.67) && (gp <= 4.0)){
-				document.forms['forrm'].elements[gradefield].value = Math.round(gp * hours * 100) / 100;
-				document.forms['forrm'].elements[creditedfield].value = "YES";
-				document.forms['forrm'].elements[earnedfield].value = "YES";
-			}
-			else if ((gp > 1.67) && (gp <= 2.67)){
+			if ((gp > 1.67) && (gp <= 4.0)){
 				document.forms['forrm'].elements[gradefield].value = Math.round(gp * hours * 100) / 100;
 				document.forms['forrm'].elements[creditedfield].value = "YES";
 				document.forms['forrm'].elements[earnedfield].value = "YES";
@@ -81,12 +76,7 @@ function update_hours (field) {
 		}	
 		<!-- before calc
 		else if (gp != ""){
-			if ((gp > 2.67) && (gp <= 4.0)){
-				document.forms['forrm'].elements[gradefield].value = "";
-				document.forms['forrm'].elements[creditedfield].value = "YES";
-				document.forms['forrm'].elements[earnedfield].value = "YES";
-			}
-			else if ((gp > 1.67) && (gp <= 2.67)){
+			if ((gp > 1.67) && (gp <= 4.0)){
 				document.forms['forrm'].elements[gradefield].value = "";
 				document.forms['forrm'].elements[creditedfield].value = "YES";
 				document.forms['forrm'].elements[earnedfield].value = "YES";
