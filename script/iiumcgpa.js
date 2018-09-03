@@ -1,8 +1,6 @@
 function update_gp (field, grade_point) {
 	var textfield = "grade_gp_"+field;
-
 	document.forms['forrm'].elements[textfield].value = grade_point;
-
 	update_hours(field);
 }
 
@@ -41,8 +39,6 @@ function update_hours (field) {
 	else if (gp == 1.00){document.forms['forrm'].elements[scorefield].value = "35 - 39";document.forms['forrm'].elements[statusfield].value = "FAILED / REPEAT - EXTREMELY POOR";}
 	else if (gp == 0.0){document.forms['forrm'].elements[scorefield].value = "0 - 34";document.forms['forrm'].elements[statusfield].value = "FAILED / REPEAT";}
 
-
-	<!-- point and subject status update
 	if (hours != -0.5) {
 		if (gp == "") {
 			document.forms['forrm'].elements[gradefield].value = "";
@@ -50,8 +46,8 @@ function update_hours (field) {
 			document.forms['forrm'].elements[creditedfield].value = "";
 			document.forms['forrm'].elements[earnedfield].value = "";
 			document.forms['forrm'].elements[scorefield].value = "";
-		}	
-		<!-- after calc
+		}
+
 		else if (gp != ""){
 			if ((gp > 1.67) && (gp <= 4.0)){
 				document.forms['forrm'].elements[gradefield].value = Math.round(gp * hours * 100) / 100;
@@ -65,7 +61,7 @@ function update_hours (field) {
 			}
 		}
 	}
-	
+
 	else if (hours == -0.5) {
 		if (gp == "") {
 			document.forms['forrm'].elements[gradefield].value = "";
@@ -73,8 +69,8 @@ function update_hours (field) {
 			document.forms['forrm'].elements[creditedfield].value = "";
 			document.forms['forrm'].elements[earnedfield].value = "";
 			document.forms['forrm'].elements[scorefield].value = "";
-		}	
-		<!-- before calc
+		}
+
 		else if (gp != ""){
 			if ((gp > 1.67) && (gp <= 4.0)){
 				document.forms['forrm'].elements[gradefield].value = "";
@@ -121,15 +117,16 @@ function update_gpas () {
 
 		index++;
 	}
-	<!-- IIUM candies
+
 	document.forms['forrm'].elements['sum_credit_hours'].value = total_hours;
 	document.forms['forrm'].elements['sum_grade_points'].value = sum_grade_points;
   
-	<!-- GPA
+
 	if (total_hours > 0) {
 		document.forms['forrm'].elements['term_gpa'].value = Math.round(sum_grade_points / total_hours * 1000) / 1000;
 		if (total_hours >= 15) {
 			if (Math.round(sum_grade_points / total_hours * 1000) / 1000 >= 3.5) {
+				document.forms['forrm'].elements['status'].value = "PASS";
 				document.forms['forrm'].elements['remarks'].value = "DEAN'S LIST";
 			} else if (Math.round(sum_grade_points / total_hours * 1000) / 1000 >= 2.0) {
 				document.forms['forrm'].elements['status'].value = "PASS";
@@ -137,7 +134,7 @@ function update_gpas () {
 			} else if (Math.round(sum_grade_points / total_hours * 1000) / 1000 < 2.0) {
 				document.forms['forrm'].elements['status'].value = "CONDITIONAL PASS";
 				document.forms['forrm'].elements['remarks'].value = "N/A";
-			}			
+			}
 		} else if ((total_hours > 0) && (total_hours < 15)) {
 			if (Math.round(sum_grade_points / total_hours * 1000) / 1000 >= 2.0) {
 				document.forms['forrm'].elements['status'].value = "PASS";
@@ -146,15 +143,14 @@ function update_gpas () {
 				document.forms['forrm'].elements['status'].value = "CONDITIONAL PASS";
 				document.forms['forrm'].elements['remarks'].value = "N/A";
 			}
-		}	
+		}
 	} else {
 		document.forms['forrm'].elements['term_gpa'].value = "";
 		document.forms['forrm'].elements['remarks'].value = "";
 	}
   
-	<!-- CGPA
 	document.forms['forrm'].elements['cumulative_gpa'].value = Math.round(1000 * (sum_grade_points + gpa*credits) / (credits + total_hours)) / 1000;
-	
+
 	if (Math.round(1000 * (sum_grade_points + gpa*credits) / (credits + total_hours)) / 1000 < 2.0) {
 		document.forms['forrm'].elements['status'].value = "DISMISS";
 		document.forms['forrm'].elements['remarks'].value = "N/A";

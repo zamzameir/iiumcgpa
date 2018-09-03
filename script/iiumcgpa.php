@@ -4,7 +4,6 @@ $update_gp = new Func("update_gp", function($field = null, $grade_point = null) 
   set(get(get(get(get($document, "forms"), "forrm"), "elements"), $textfield), "value", $grade_point);
   call($update_hours, $field);
 });
-
 $update_hours = new Func("update_hours", function($field = null) use (&$creditedfield, &$earnedfield, &$scorefield, &$document, &$Math) {
   $gradefield = "";
   $statusfield = "";
@@ -25,7 +24,6 @@ $update_hours = new Func("update_hours", function($field = null) use (&$credited
   $scorefield = _concat("score_", $field);
   $hours = get(get(get(get(get(get(get($document, "forms"), "forrm"), "elements"), $credit_hours), "options"), get(get(get(get(get($document, "forms"), "forrm"), "elements"), $credit_hours), "selectedIndex")), "value");
   $gp = get(get(get(get(get($document, "forms"), "forrm"), "elements"), $grade), "value");
-  
   if (eq($gp, 4.0)) {
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), $scorefield), "value", "80 - 100");
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "PASSED - EXCELLENT");
@@ -60,7 +58,7 @@ $update_hours = new Func("update_hours", function($field = null) use (&$credited
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), $scorefield), "value", "0 - 34");
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), $statusfield), "value", "FAILED / REPEAT");
   }
-  
+
   if (!eq($hours, -0.5)) {
     if (eq($gp, "")) {
       set(get(get(get(get($document, "forms"), "forrm"), "elements"), $gradefield), "value", "");
@@ -78,7 +76,6 @@ $update_hours = new Func("update_hours", function($field = null) use (&$credited
         set(get(get(get(get($document, "forms"), "forrm"), "elements"), $creditedfield), "value", "YES");
         set(get(get(get(get($document, "forms"), "forrm"), "elements"), $earnedfield), "value", "NO");
       }
-
 
     }
 
@@ -99,9 +96,10 @@ $update_hours = new Func("update_hours", function($field = null) use (&$credited
         set(get(get(get(get($document, "forms"), "forrm"), "elements"), $creditedfield), "value", "YES");
         set(get(get(get(get($document, "forms"), "forrm"), "elements"), $earnedfield), "value", "NO");
       }
-    }
-  }
 
+    }
+
+  }
 });
 $update_gpas = new Func("update_gpas", function() use (&$document, &$update_gp, &$Math) {
   $gradefield = "";
@@ -133,18 +131,25 @@ $update_gpas = new Func("update_gpas", function() use (&$document, &$update_gp, 
     set(get(get(get(get($document, "forms"), "forrm"), "elements"), "term_gpa"), "value", _divide(call_method($Math, "round", _divide($sum_grade_points, $total_hours) * 1000.0), 1000.0));
     if ($total_hours >= 15.0) {
       if (_divide(call_method($Math, "round", _divide($sum_grade_points, $total_hours) * 1000.0), 1000.0) >= 3.5) {
+        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "status"), "value", "PASS");
         set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "DEAN'S LIST");
       } else if (_divide(call_method($Math, "round", _divide($sum_grade_points, $total_hours) * 1000.0), 1000.0) >= 2.0) {
-        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "PASS");
+        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "status"), "value", "PASS");
+        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "N/A");
       } else if (_divide(call_method($Math, "round", _divide($sum_grade_points, $total_hours) * 1000.0), 1000.0) < 2.0) {
-        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "CONDITIONAL PASS");
+        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "status"), "value", "CONDITIONAL PASS");
+        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "N/A");
       }
+
     } else if ($total_hours > 0.0 && $total_hours < 15.0) {
       if (_divide(call_method($Math, "round", _divide($sum_grade_points, $total_hours) * 1000.0), 1000.0) >= 2.0) {
-        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "PASS");
+        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "status"), "value", "PASS");
+        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "N/A");
       } else if (_divide(call_method($Math, "round", _divide($sum_grade_points, $total_hours) * 1000.0), 1000.0) < 2.0) {
-        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "CONDITIONAL PASS");
+        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "status"), "value", "CONDITIONAL PASS");
+        set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "N/A");
       }
+
     }
 
   } else {
@@ -154,6 +159,7 @@ $update_gpas = new Func("update_gpas", function() use (&$document, &$update_gp, 
 
   set(get(get(get(get($document, "forms"), "forrm"), "elements"), "cumulative_gpa"), "value", _divide(call_method($Math, "round", _divide(1000.0 * to_number(_plus($sum_grade_points, to_number($gpa) * to_number($credits))), _plus($credits, $total_hours))), 1000.0));
   if (_divide(call_method($Math, "round", _divide(1000.0 * to_number(_plus($sum_grade_points, to_number($gpa) * to_number($credits))), _plus($credits, $total_hours))), 1000.0) < 2.0) {
-    set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "DISMISS");
+    set(get(get(get(get($document, "forms"), "forrm"), "elements"), "status"), "value", "DISMISS");
+    set(get(get(get(get($document, "forms"), "forrm"), "elements"), "remarks"), "value", "N/A");
   }
 });
