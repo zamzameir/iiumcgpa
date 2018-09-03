@@ -132,15 +132,19 @@ function update_gpas () {
 			if (Math.round(sum_grade_points / total_hours * 1000) / 1000 >= 3.5) {
 				document.forms['forrm'].elements['remarks'].value = "DEAN'S LIST";
 			} else if (Math.round(sum_grade_points / total_hours * 1000) / 1000 >= 2.0) {
-				document.forms['forrm'].elements['remarks'].value = "PASS";
+				document.forms['forrm'].elements['status'].value = "PASS";
+				document.forms['forrm'].elements['remarks'].value = "N/A";
 			} else if (Math.round(sum_grade_points / total_hours * 1000) / 1000 < 2.0) {
-				document.forms['forrm'].elements['remarks'].value = "CONDITIONAL PASS";
+				document.forms['forrm'].elements['status'].value = "CONDITIONAL PASS";
+				document.forms['forrm'].elements['remarks'].value = "N/A";
 			}			
 		} else if ((total_hours > 0) && (total_hours < 15)) {
 			if (Math.round(sum_grade_points / total_hours * 1000) / 1000 >= 2.0) {
-				document.forms['forrm'].elements['remarks'].value = "PASS";
+				document.forms['forrm'].elements['status'].value = "PASS";
+				document.forms['forrm'].elements['remarks'].value = "N/A";
 			} else if (Math.round(sum_grade_points / total_hours * 1000) / 1000 < 2.0) {
-				document.forms['forrm'].elements['remarks'].value = "CONDITIONAL PASS";
+				document.forms['forrm'].elements['status'].value = "CONDITIONAL PASS";
+				document.forms['forrm'].elements['remarks'].value = "N/A";
 			}
 		}	
 	} else {
@@ -152,6 +156,7 @@ function update_gpas () {
 	document.forms['forrm'].elements['cumulative_gpa'].value = Math.round(1000 * (sum_grade_points + gpa*credits) / (credits + total_hours)) / 1000;
 	
 	if (Math.round(1000 * (sum_grade_points + gpa*credits) / (credits + total_hours)) / 1000 < 2.0) {
-		document.forms['forrm'].elements['remarks'].value = "DISMISS";
+		document.forms['forrm'].elements['status'].value = "DISMISS";
+		document.forms['forrm'].elements['remarks'].value = "N/A";
 	}
 }
