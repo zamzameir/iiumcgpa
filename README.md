@@ -1,5 +1,6 @@
 # iiumcgpa
-- All credits goes to the respective owner(s) (UTAR)
+
+- All credit goes to the respective owner(s) (UTAR)
 - Add support and compatibility for latest IIUM grading system
   including remarks support
 - No user data is being collected
