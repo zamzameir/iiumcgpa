@@ -5,6 +5,10 @@
   including remarks support
 - No user data is being collected
 
+```
+Final Commit as of : 19/9/18
+```
+
 ### License
 
 ```
