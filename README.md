@@ -20,5 +20,5 @@ limitations under the License.
 ```
 
 ```
-(Inquires:zamzameir@gmail.com)
+[Inquires](mailto:zamzameir@gmail.com)
 ```
