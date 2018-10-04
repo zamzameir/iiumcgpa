@@ -1,7 +1,7 @@
 # iiumcgpa
 Support and compatible with the latest IIUM grading system
 
-[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)]()[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)]()[![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)]()[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)]()[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)]()
+[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](tiny.cc/iiumcgpa)[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](tiny.cc/iiumcgpa)[![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](tiny.cc/iiumcgpa)[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](tiny.cc/iiumcgpa)[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](tiny.cc/iiumcgpa)
 
 ### License
 
