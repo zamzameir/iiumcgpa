@@ -10,11 +10,13 @@ var filesToCache = [
     "./README.md",
     "./LICENSE.md",
     "./_config.yml",
+    "./images/",
     "./images/banner_color.jpg",
     "./images/banner_white.png",
     "./images/icon.ico",
     "./images/logo.png",
     "./images/ribbon.png",
+    "./style/",
     "./style/iiumcgpa.css"];
 
 self.addEventListener('install', function(event) {
