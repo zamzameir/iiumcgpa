@@ -3,7 +3,7 @@ var cacheName = 'IIUMCGPA';
 var filesToCache = [
     "./",
     "./index.html",
-    "./404.html",
+    /*"./404.html",*/
     "./redirect.html",
     "./README.md",
     "./LICENSE.md",
