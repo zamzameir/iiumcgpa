@@ -2,7 +2,7 @@ function update_gp(e,m){var r="grade_gp_"+e;document.forms.forrm.elements[r].val
 
 (function() {
     if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./service-worker.js')
+        navigator.serviceWorker.register('./script/service-worker.js')
             .then(function(registration) {
                 console.log('Registration successful, scope is:', registration.scope);
             })

@@ -1,23 +1,23 @@
 var dataCacheName = 'IIUMCGPA';
 var cacheName = 'IIUMCGPA';
 var filesToCache = [
-    "./",
-    "./index.html",
-    /*"./404.html",*/
-    "./redirect.html",
-    "./README.md",
-    "./LICENSE.md",
-    "./_config.yml",
-    "./images/",
-    "./images/banner_color.jpg",
-    "./images/banner_white.png",
-    "./images/icon.ico",
-    "./images/logo.png",
-    "./images/ribbon.png",
-    "./script/",
-    "./script/iiumcgpa.php",
-    "./style/",
-    "./style/iiumcgpa.css"];
+    "././",
+    "././index.html",
+    "././offline.html",
+    "././redirect.html",
+    "././README.md",
+    "././LICENSE.md",
+    "././_config.yml",
+    "././images/",
+    "././images/banner_color.jpg",
+    "././images/banner_white.png",
+    "././images/icon.ico",
+    "././images/logo.png",
+    "././images/ribbon.png",
+    "././script/",
+    "././script/iiumcgpa.js",
+    "././style/",
+    "././style/iiumcgpa.css"];
 
 self.addEventListener('install', function(event) {
     event.waitUntil(
