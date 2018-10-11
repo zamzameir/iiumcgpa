@@ -1,8 +1,6 @@
 var dataCacheName = 'IIUMCGPA';
 var cacheName = 'IIUMCGPA';
 var filesToCache = [
-    "iiumcgpa.js",
-    "iiumcgpa.php",
     "./",
     "./index.html",
     "./404.html",
@@ -16,6 +14,8 @@ var filesToCache = [
     "./images/icon.ico",
     "./images/logo.png",
     "./images/ribbon.png",
+    "./script/",
+    "./script/iiumcgpa.php",
     "./style/",
     "./style/iiumcgpa.css"];
 
