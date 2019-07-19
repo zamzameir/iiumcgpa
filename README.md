@@ -7,5 +7,5 @@ Support and compatible with the latest IIUM grading system
 
 ```
 Copyright 2018 zamzameir
-Licensed under <a href="https://github.com/zamzameir/iiumcgpa/blob/master/LICENSE.md">GNU GPL 3.0</a>
+Licensed under GNU GPL-3.0
 ```
