@@ -6,6 +6,5 @@ Support and compatible with the latest IIUM grading system
 ### Acknowledgement
 
 ```
-Copyright 2018 zamzameir
-Licensed under GNU GPL-3.0
+@2018 zamzameir
 ```
