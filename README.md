@@ -2,6 +2,10 @@
 
 Support and compatible with the latest IIUM grading system as of 2022
 
+```
+Latest changes : Minimum credit hours was set to 12 for Dean's List
+```
+
 <ul>
   <li>This calculator calculates your new expected GPA & CGPA in the next semester</li>
   <li>It helps you to manage your study plan and predict what grade you should achieve in getting such desired GPA, CGPA or even DL as most of the online cgpa calculator doesnt support IIUM credit hours. eg: 0.5</li>
