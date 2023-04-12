@@ -1,6 +1,6 @@
 # iiumcgpa
 
-Support and compatible with the latest IIUM grading system as of 2022
+Support and compatible with the latest IIUM grading system as of 2023
 
 ```
 Latest changes : Minimum credit hours was set to 12 for Dean's List
