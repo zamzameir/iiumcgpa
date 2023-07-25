@@ -4,7 +4,7 @@ Support and compatible with the latest IIUM grading system as of 2023
 
 ```
 Changelog : Update the minimum credit hour requirement for Dean's List to 12 (Old: 15)
-            Credit to : Muhammad Aliff Najmi bin Saril (IIUM Pagoh)
+Credit to : Muhammad Aliff Najmi bin Saril (IIUM Pagoh)
 ```
 <ul>
   <li>This calculator calculates your new expected GPA & CGPA in the next semester</li>
