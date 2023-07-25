@@ -3,7 +3,7 @@
 Support and compatible with the latest IIUM grading system as of 2023
 
 ```
-Latest changes : Minimum credit hours was set to 12 for Dean's List
+Changelog : Change the minimum credit hour requirement for Dean's List to 12 (Old: 15)
 ```
 
 <ul>
@@ -14,5 +14,5 @@ Latest changes : Minimum credit hours was set to 12 for Dean's List
 [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://raw.githubusercontent.com/zamzameir/iiumcgpa/master/index.html)[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://raw.githubusercontent.com/zamzameir/iiumcgpa/master/style/iiumcgpa.css)[![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://raw.githubusercontent.com/zamzameir/iiumcgpa/master/script/iiumcgpa.js)[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://tiny.cc/iiumcgpa)[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://tiny.cc/iiumcgpa)
 
 ```
-@2018 zamzameir
+@2018 zamzameir@gmail.com
 ```
