@@ -6,6 +6,12 @@
   <i align="center">Plan your academic journey with precision using this tool designed for IIUM students</i>
 </p>
 
+## Changelog
+
+Update the minimum credit hour requirement for Dean's List to 12 (Old: 15)
+
+Credit to : Muhammad Aliff Najmi bin Saril (IIUM Pagoh)
+
 ## Introduction
 
 This calculator is designed to provide accurate predictions in estimating your upcoming semester's GPA and CGPA, aiding you in effectively planning your studies.
