@@ -37,7 +37,7 @@ Notably, it accommodates IIUM credit hours, including unconventional values like
   - Once you've filled in all the necessary details, hit the calculate button. Watch as the magic happens!
 
 `5.Discover Your Status`:
-  - Your updated CGPA, overall credit hours, and academic standing will be displayed. Get insights into your academic performance and potential improvements.
+  - Your updated GPA, CGPA, status and remarks for academic standing will be displayed. Get insights into your academic performance and potential improvements.
 
   <p align="center" width="100%">
     <img width="33%" src="https://github.com/zamzameir/iiumcgpa/blob/master/images/guide3.png">
