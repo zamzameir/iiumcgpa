@@ -8,7 +8,7 @@
 
 ## Changelog Jul 20, 2022
 
-Update the minimum credit hour requirement for Dean's List to 12 (Old: 15)
+The minimum credit hour requirement for Dean's List eligibility has been revised to 12 credit hours, down from the previous requirement of 15 credit hours
 
 Credit to : Muhammad Aliff Najmi bin Saril (IIUM Pagoh)
 
