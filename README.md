@@ -1,6 +1,8 @@
-<h1 align="center">
-  <p>iiumcgpa</p>
-</h1>
+<a href="https://zamzameir.github.io/iiumcgpa">
+  <h1 align="center">
+    <p>iiumcgpa</p>
+  </h1>
+</a>
 
 <p align="center">
   <i align="center">Plan your academic journey with precision using this tool designed for IIUM students</i>
@@ -22,7 +24,7 @@ This calculator supports the latest IIUM grading system as of `2023` and provide
   - Start by inserting your current Cumulative Grade Point Average. This is the GPA you've earned so far in your academic journey.
 
 `2.Add Your Total Credit Hours`:
-  - Find this information on your latest exam slip. Input the total credit hours you've accumulated up to the previous semester, excluding the current one.
+  - Find this information on your latest exam slip / Imaalum portal. Input the total credit hours you've accumulated up to the previous semester, excluding the current one.
 
   <p align="center" width="100%">
     <img width="33%" src="https://github.com/zamzameir/iiumcgpa/blob/master/images/guide1.png">
