@@ -8,13 +8,11 @@
 
 ## Introduction
 
-This calculator is designed to estimate your upcoming semester's GPA and CGPA, aiding you in effectively planning your studies.
+This calculator is designed to provide accurate predictions in estimating your upcoming semester's GPA and CGPA, aiding you in effectively planning your studies.
 
 It empowers you to strategize your academic goals, predicting the grades needed to attain your desired GPA, CGPA, or even Dean's List status. 
 
 Notably, it accommodates IIUM credit hours, including unconventional values like 0.5 that many online CGPA calculators may not support.
-
-This calculator supports the latest IIUM grading system as of `2023` and provides accurate predictions for your GPA, CGPA, and Dean's List eligibility.
 
 ## Usage Guide 
 
