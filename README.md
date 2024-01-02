@@ -6,7 +6,7 @@
   <i align="center">Plan your academic journey with precision using this tool designed for IIUM students</i>
 </p>
 
-## Changelog
+## Changelog Jul 20, 2022
 
 Update the minimum credit hour requirement for Dean's List to 12 (Old: 15)
 
