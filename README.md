@@ -1,6 +1,6 @@
-<h1 align="center">
-    [iiumcgpa]([www.google.com](https://zamzameir.github.io/iiumcgpa/))
-</h1>
+  <h1 align="center">
+    <p>iiumcgpa</p>
+  </h1>
 
 <p align="center">
   <i align="center">Plan your academic journey with precision using this tool designed for IIUM students</i>
