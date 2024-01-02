@@ -12,6 +12,7 @@ The minimum credit hour requirement for Dean's List eligibility has been revised
 
 Credit to : Muhammad Aliff Najmi bin Saril (IIUM Pagoh)
 
+
 ## Introduction
 
 This calculator is designed to provide accurate predictions in estimating your upcoming semester's GPA and CGPA, aiding you in effectively planning your studies.
@@ -19,6 +20,7 @@ This calculator is designed to provide accurate predictions in estimating your u
 It empowers you to strategize your academic goals, predicting the grades needed to attain your desired GPA, CGPA, or even Dean's List status. 
 
 Notably, it accommodates IIUM credit hours, including unconventional values like 0.5 that many online CGPA calculators may not support.
+
 
 ## Usage Guide 
 
@@ -55,6 +57,7 @@ Notably, it accommodates IIUM credit hours, including unconventional values like
   - Keep your eye on the target CGPA for academic excellence.
 
 Start calculating and take control of your academic journey! Best of luck with your studies!
+
 
 ## License
 
