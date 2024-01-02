@@ -16,13 +16,17 @@ Notably, it accommodates IIUM credit hours, including unconventional values like
 
 This calculator supports the latest IIUM grading system as of `2023` and provides accurate predictions for your GPA, CGPA, and Dean's List eligibility.
 
-## Calculator Guide 
+## Usage Guide 
 
 `1.Enter Your Current CGPA`:
   - Start by inserting your current Cumulative Grade Point Average. This is the GPA you've earned so far in your academic journey.
 
 `2.Add Your Total Credit Hours`:
   - Find this information on your latest exam slip. Input the total credit hours you've accumulated up to the previous semester, excluding the current one.
+
+  <p align="center" width="100%">
+    <img width="33%" src="https://i.stack.imgur.com/RJj4x.png">
+  </p>
 
 `3.Fill in Expected Grades`:
   - Anticipate your grades for the current semester. Enter the expected grade and its corresponding credit hours for each subject.
