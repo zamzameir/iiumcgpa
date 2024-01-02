@@ -31,12 +31,12 @@ This calculator supports the latest IIUM grading system as of `2023` and provide
 `3.Fill in Expected Grades`:
   - Anticipate your grades for the current semester. Enter the expected grade and its corresponding credit hours for each subject.
 
-`4.Click "Calculate"`:
-  - Once you've filled in all the necessary details, hit the calculate button. Watch as the magic happens!
-
   <p align="center" width="100%">
     <img width="33%" src="https://github.com/zamzameir/iiumcgpa/blob/master/images/guide2.png">
   </p>
+
+`4.Click "Calculate"`:
+  - Once you've filled in all the necessary details, hit the calculate button. Watch as the magic happens!
 
 `5.Discover Your Status`:
   - Your updated CGPA, overall credit hours, and academic standing will be displayed. Get insights into your academic performance and potential improvements.
