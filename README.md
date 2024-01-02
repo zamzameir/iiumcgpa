@@ -25,7 +25,7 @@ This calculator supports the latest IIUM grading system as of `2023` and provide
   - Find this information on your latest exam slip. Input the total credit hours you've accumulated up to the previous semester, excluding the current one.
 
   <p align="center" width="100%">
-    <img width="33%" src="https://i.stack.imgur.com/RJj4x.png">
+    <img width="33%" src="https://github.com/zamzameir/iiumcgpa/blob/master/images/guide1.png">
   </p>
 
 `3.Fill in Expected Grades`:
