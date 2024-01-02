@@ -1,4 +1,4 @@
-<a href="https://zamzameir.github.io/iiumcgpa">
+<a href="https://zamzameir.github.io/iiumcgpa/" target="_blank">
   <h1 align="center">
     <p>iiumcgpa</p>
   </h1>
