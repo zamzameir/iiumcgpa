@@ -24,27 +24,27 @@ Notably, it accommodates IIUM credit hours, including unconventional values like
 
 ## Usage Guide 
 
-`1.Enter Your Current CGPA`:
+`1 Enter Your Current CGPA`:
   - Start by inserting your current Cumulative Grade Point Average. This is the GPA you've earned so far in your academic journey.
 
-`2.Add Your Total Credit Hours`:
+`1.1 Add Your Total Credit Hours`:
   - Find this information on your latest exam slip / Imaalum portal. Input the total credit hours you've accumulated up to the previous semester, excluding the current one.
 
   <p align="center" width="100%">
     <img width="33%" src="https://github.com/zamzameir/iiumcgpa/blob/master/images/guide1.png">
   </p>
 
-`3.Fill in Expected Grades`:
+`2 Fill in Expected Grades`:
   - Anticipate your grades for the current semester. Enter the expected grade and its corresponding credit hours for each subject.
 
   <p align="center" width="100%">
     <img width="33%" src="https://github.com/zamzameir/iiumcgpa/blob/master/images/guide2.png">
   </p>
 
-`4.Click "Calculate"`:
+`3 Click "Calculate"`:
   - Once you've filled in all the necessary details, hit the calculate button. Watch as the magic happens!
 
-`5.Discover Your Status`:
+`3.1 Discover Your Status`:
   - Your updated GPA, CGPA, status and remarks for academic standing will be displayed. Get insights into your academic performance and potential improvements.
 
   <p align="center" width="100%">
